@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px 10px;
+        }
+
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h4 {
+            text-align: center;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .nav-link {
+            text-align: center;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .nav-link.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .contact-container {
+    padding-top: 80px; /* Increase top padding to move the content downward */
+    padding-bottom: 40px; /* Optional: Add some bottom padding for balance */
+}
+
+.row {
+    align-items: center; /* Ensure vertical centering */
+    min-height: calc(100vh - 200px); /* Adjust height to maintain centering dynamically */
+}
+
+
+        .section-header .subheading {
+    font-family: Arial, sans-serif; /* Sans-serif font for subheading */
+    font-size: 0.875rem; /* Small font size */
+    font-weight: lighter; /* Bold text */
+    color: #6c757d; /* Light gray color */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+}
+
+.section-header .main-heading {
+    font-family: 'Georgia', serif; /* Serif font for main heading */
+    font-size: 2rem; /* Larger font size */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
+    color: #000; /* Black color */
+}
+
+        .section-header .main-heading {
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .contact-info p {
+            margin: 0;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 bg-light d-flex flex-column align-items-center py-4" style="min-height: 100vh;">
+                <img src="images/home/1.jpg" alt="Profile Picture" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                <h4 class="text-center">Yashwanth Anirudh Ettikala</h4>
+                <p class="text-center">Data Analyst</p>
+
+                <nav class="nav flex-column text-center">
+                    <a class="nav-link text-dark" href="index.html">HOME</a>
+                    <a class="nav-link text-dark" href="about.html">ABOUT</a>
+                    <a class="nav-link text-dark" href="portfolio.html">PORTFOLIO</a>
+                    <a class="nav-link text-dark" href="expertise.html">EXPERTISE</a>
+                    <a class="nav-link text-dark" href="experience.html">EXPERIENCE</a>
+                    <a class="nav-link text-dark" href="education.html">EDUCATION</a>
+                    <a class="nav-link active" href="contact.html">CONTACT</a>
+                </nav>
+
+                
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10">
+                <div class="contact-container">
+                    <div class="section-header">
+                        <div class="subheading">Get in Touch</div>
+                        <h2 class="main-heading">Contact</h2>
+                    </div>
+
+                    <div class="row">
+                        <!-- Contact Info -->
+                        <div class="col-md-6">
+                            <div class="contact-info d-flex align-items-center mb-4">
+                                <i class="bi bi-envelope"></i>
+                                <div>
+                                    <p>yashwanth.anirudh@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info d-flex align-items-center mb-4">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <p>Hartford, CT</p>
+                                </div>
+                            </div>
+                            <div class="contact-info d-flex align-items-center mb-4">
+                                <i class="bi bi-linkedin"></i>
+                                <div>
+                                    <p><a href="https://www.linkedin.com/in/yashwanth-anirudh-ettikala-1707a0299/" target="_blank">LinkedIn Profile</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info d-flex align-items-center mb-4">
+                                <i class="bi bi-telephone"></i>
+                                <div>
+                                    <p>+1 860 461 4847</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="col-md-6">
+                            <form action="https://formspree.io/f/mzzzekrw" method="POST">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

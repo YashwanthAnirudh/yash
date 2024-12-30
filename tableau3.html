@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau - Data Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-banner {
+            text-align: center;
+            background-color: #000;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .header-banner h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .header-banner .subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-picture img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .carousel-container {
+            max-width: 900px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            background-color: #0d6efd;
+            border-radius: 50%;
+        }
+
+        .carousel-indicators [data-bs-target].active {
+            background-color: #0a58ca;
+        }
+        .dashboard-link-box {
+        border: 2px solid #bcd4e6; /* Light blue border */
+        border-radius: 10px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 15px; /* Inner padding for spacing */
+    margin-top: 20px; /* Space from other sections */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+        }
+
+        .dashboard-link-box img {
+    width: 30px; /* Icon size */
+    height: 30px;
+    border-radius: 50%; /* Circular icon */
+        }
+
+.dashboard-link-box a {
+    text-decoration: none;
+    color: #0d6efd; /* Link color */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.dashboard-link-box a:hover {
+    text-decoration: underline;
+}
+
+
+        .key-insights, .skills-showcased {
+            margin-top: 30px;
+        }
+
+        .key-insights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-insights ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .skills-showcased {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skills-showcased span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <h1>Sales Insights Dashboard</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <h2>Data Analytics</h2>
+        <p><strong>Problem Statement:</strong>To unlock sales insights that are not visible before for sales team for decision support and automate them i.e create dashbboards to reduced manual time spent in data gathering.
+        </p>
+
+        <!-- Dashboard Link -->
+        <div class="dashboard-link-box">
+            <img src="images/projects/tableau.jpg" alt="Tableau Icon">
+            <div>
+                <h2>Sales Insights Dashboard -Revenue Analysis</h2>
+                <a href="https://public.tableau.com/app/profile/yashwanth.anirudh.ettikala/viz/SalesInsightsRevenueAnalysisDashboard/DasboardRevenueAnalysis" target="_blank">
+                    https://public.tableau.com/app/profile/yashwanth.anirudh.ettikala/viz/
+                </a>
+            </div>
+        </div>
+        <div class="dashboard-link-box">
+            <img src="images/projects/tableau.jpg" alt="Tableau Icon">
+            <div>
+                <h2>Sales Insights Dashboard -Profit Analysis</h2>
+                <a href="https://public.tableau.com/app/profile/yashwanth.anirudh.ettikala/viz/SalesInsightsProfitAnalysisDashboard/DashboardProfitAnalysis" target="_blank">
+                    https://public.tableau.com/app/profile/yashwanth.anirudh.ettikala/viz/
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <div id="dashboardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/Dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#dashboardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#dashboardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/projects/profit.jpg" class="d-block w-100" alt="Dashboard 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/projects/revenue.jpg" class="d-block w-100" alt="Dashboard 2">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#dashboardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#dashboardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <h3>Process</h3>
+        <div class="key-findings-section">
+            <ul>
+                <li><strong>Step 1: Data Discovery</strong> – Imported the dump.sql file(where the entire data is present) into SQL Workbench to set up the database for analysis, ensuring that all data in tables and views was accessible and ready for exploration.</li>
+
+<li><strong>Step 2: Data Analysis and Cleaning</strong> – Analyzed the database structure and standardized the inconsistent currency values in the transactions table by creating a new column named normalized_currency to convert all values to INR for consistency.</li>
+
+<li><strong>Step 3: Data Integration and ETL</strong> – Established a connection between the SQL database and Tableau using an ETL pipeline for seamless data access, ensuring that the cleaned data was dynamically available for visualization development in Tableau.</li>
+
+            </ul>
+        </div>
+        <h3>Key Insights</h3>
+        <div class="key-findings-section">
+            <ul>
+                <li>Created an interactive Tableau dashboard to analyze the sales trends of AtliQ hardware goods, enabling better decision-making for the sales team.</li>
+
+                <li>Surat led with the highest profit margin percentage at 4.86%, whereas Bengaluru showed a negative profit margin of -20.78%, indicating potential areas for operational improvement.</li>
+                
+                <li>Total revenue over the period amounted to ₹984.87M, with a steady contribution from both e-commerce (24.4%) and brick-and-mortar (75.6%) channels.</li>
+                
+                <li>Electrical stores emerged as the top customer segment, contributing ₹413.33M to revenue, while Prod040 was the best-performing product with sales of ₹23.58M.</li>
+                            </ul>
+        </div>
+
+        <h3>Skills Showcased</h3>
+        <div class="skills-showcased">
+            <span>Tableau</span>
+            <span>Data Visualization</span>
+            <span>SQL</span>
+            <span>Data Cleaning</span>
+            <span>Data Analysis using SQL</span>
+            <span>ETL</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background-color: #f5f6f8;
+            padding: 20px 10px;
+        }
+
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h4 {
+            text-align: center;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .nav-link {
+            text-align: center;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .nav-link.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 50px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f8f9fa;
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .sidebar h4 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .nav-link {
+            color: #495057;
+            font-size: 1rem;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .sidebar .nav-link.active {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .sidebar .social-icons a {
+            color: #495057;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .section-header .subheading {
+    font-family: Arial, sans-serif; /* Sans-serif font for subheading */
+    font-size: 0.875rem; /* Small font size */
+    font-weight: lighter; /* Bold text */
+    color: #6c757d; /* Light gray color */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 0.1em; /* Increased letter spacing */
+}
+
+.section-header .main-heading {
+    font-family: 'Georgia', serif; /* Serif font for main heading */
+    font-size: 2rem; /* Larger font size */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
+    color: #000; /* Black color */
+}
+
+        .section-header .main-heading {
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #e0e0e0;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 50px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+        }
+
+        .timeline-item .item-content {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item .item-content h5 {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .item-content p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .timeline-item .item-content ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .timeline-item .item-content ul li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 bg-light d-flex flex-column align-items-center py-4" style="min-height: 100vh;">
+                <img src="images/home/1.jpg" alt="Profile Picture" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                <h4 class="text-center">Yashwanth Anirudh Ettikala</h4>
+                <p class="text-center">Data Analyst</p>
+
+                <nav class="nav flex-column text-center">
+                    <a class="nav-link text-dark" href="index.html">HOME</a>
+                    <a class="nav-link text-dark" href="about.html">ABOUT</a>
+                    <a class="nav-link text-dark" href="portfolio.html">PORTFOLIO</a>
+                    <a class="nav-link text-dark" href="expertise.html">EXPERTISE</a>
+                    <a class="nav-link active" href="experience.html">EXPERIENCE</a>
+                    <a class="nav-link text-dark" href="education.html">EDUCATION</a>
+                    <a class="nav-link text-dark" href="contact.html">CONTACT</a>
+                </nav>
+                
+
+                <div class="mt-auto">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="section-header">
+                <div class="subheading">Experience</div>
+                <h2 class="main-heading">Work Experience</h2>
+            </div>     
+
+            <!-- Timeline Section -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="item-content">
+                        <h5>Ananda</h5>
+                        <p>Business Analyst<br>Aug 2024 - Dec 2024</p>
+                        <ul>
+<li>Led the design and implementation of an LLM-powered chatbot for trading platforms, utilizing models like Llama, Gemma, and Mistral to enhance real-time decision-making.</li>
+<li>Integrated Retrieval-Augmented Generation (RAG) to improve the chatbot’s response accuracy and relevance, significantly enhancing user interaction across trading platforms.</li>
+<li>Conducted comprehensive performance evaluations using BLEU, ROUGE, BERT scores, and Cosine similarity, verifying the superiority of our chatbot models through detailed statistical analysis.</li>
+<li>Optimized chatbot systems for high-accuracy tasks, justifying a 20% increase in operational costs for precision-demanding applications in trading.</li>
+<li>Conducted cost-effectiveness analysis of LLM models, establishing Mistral RAG as the optimal choice for balancing high performance with cost-efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-content">
+                        <h5>Temenos</h5>
+                        <p>Data Analyst<br>Dec 2021 - Jul 2023</p>
+                        <ul>
+                            <li>Implemented a highly efficient process leveraging SQL Server and Oracle SQL for verifying and validating transaction details to identify and prevent fraudulent activities.</li>
+
+                            <li>Utilized JIRA for efficient project management and collaborated with global clients to understand needs, leveraging MS Excel and PowerPoint to effectively communicate complex risk data and analysis.</li>
+                            
+                            <li>Conducted comprehensive data analysis to identify patterns in financial transactions, prepared dashboards and reports using risk transaction matrices for country-specific risk ratings, and resolved escalations to ensure client satisfaction.</li>
+                            
+                            <li>Leveraged Advanced Excel (pivot tables, VLOOKUP, SUMIFS) to analyze customer data, leading to 30% higher customer engagement and conversion rates.</li>                            
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
