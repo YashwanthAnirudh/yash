@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-banner {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header-banner h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-banner .subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .header-banner img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .content-container p, .content-container ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skills-section span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .design-section img {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 10px;
+        }
+        .project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-link .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #0d6efd;
+}
+h4 {
+    font-size: 1 rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 10px;
+}
+.result-image {
+    max-width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add spacing around the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.center-text {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Add spacing above */
+    margin-bottom: 10px; /* Optional: Add spacing below */
+    font-size: 1.2rem; /* Optional: Adjust font size */
+    color: #212529; /* Optional: Ensure proper text color */
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <h1>Image Classification</h1>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="content-container">
+
+        <!-- About Section -->
+        <h2><span class="checkmark">✔</span>Problem Statement</h2>
+        <ul>
+            <p>The goal is to develop a machine learning model that can accurately classify images of five specific sports persons. This involves creating a robust image classification pipeline, optimizing model performance through hyperparameter tuning, and saving the trained model for integration with a Flask server to enable real-time predictions on the web platform.</p>
+
+        </ul>
+
+       <!-- Project Links -->
+<h4>Github Link</h4>
+<p>
+    <a href="https://github.com/YashwanthAnirudh/image_classification" target="_blank" class="project-link">
+        <span class="icon">🔗</span> Link →
+    </a>
+</p>
+
+<h2><span class="checkmark">✔</span>Process</h2>
+        <ul>
+            <li><strong>Step 1: Data Collection</strong> – Manually downloaded images of five sports celebrities and stored them in the images_dataset folder for further processing.</li>
+
+            <li><strong>Step 2: Data Cleaning</strong> – Retained only relevant images containing a clear face with two eyes. The cleaning process included converting colored images to grayscale, detecting faces with OpenCV's Haar Cascade technique, cropping detected faces, and manually removing irrelevant or incorrectly cropped images from the cropped folder.</li>
+            
+            <li><strong>Step 3: Feature Engineering</strong> – Performed wavelet transformation on the images to extract important features. Combined the raw image with the wavelet-transformed image vertically using NumPy's stacking method to create the input dataset (X), and created the target dataset (Y) containing the names of the sports celebrities, preparing the datasets for model training.</li>
+            
+            <li><strong>Step 4: Model Training</strong> – Selected Support Vector Machine (SVM) as the initial model for classification. Split the dataset into training and testing sets, scaled the input data, and trained the model, achieving an initial accuracy of 80%. The performance was further evaluated through a classification report.</li>
+            
+            <li><strong>Step 5: Hyperparameter Tuning</strong> – Applied GridSearchCV to test different models with 5-fold cross-validation, determining the best model and validation score based on the validation data.</li>
+            
+            <li><strong>Step 6: Results</strong> – Achieved an accuracy of 79% on the validation data from GridSearchCV and 86% on the test data, indicating the effectiveness of the trained model.</li>
+            
+            <li><strong>Step 7: Outcome</strong> – Selected Support Vector Machine (SVM) as the best model for the task. Plotted the confusion matrix using Seaborn's heatmap to visualize the model's performance, with the X-axis representing predicted values and the Y-axis representing true values.</li>
+            
+            <li><strong>Step 8: Model Saving</strong> – Saved the trained SVM model as a .pkl file using joblib for easy deployment and integration into a Flask server for future use on the website.</li>
+            
+            
+        </ul>
+
+
+        <!-- Skills Section -->
+        <h2><span class="checkmark">✔</span>Skills Showcased</h2>
+        <div class="skills-section">
+            <span>Data Cleaning</span>
+            <span>Data Preprocessing</span>
+            <span>Exploratory Data Analysis</span>
+            <span>Data Modeling</span>
+            <span>Python</span>
+        </div>
+
+        <h2><span class="checkmark">✔</span> Technologies Used</h2>
+        <div class="skills-section">
+            <span>Numpy</span>
+            <span>Open CV</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+            <span>Sklearn</span>
+            <span>GridSearchCV</span>
+        </div>
+
+      <!-- Results Section -->
+
+        
+<p class="center-text"><strong>Best Model</strong></p>
+<img src="images/projects/imageclassificationmodel.jpg" alt="Best Model" class="result-image">
+
+<h2><span class="checkmark">✔</span>Conclusion</h2>
+        <ul>
+<p>The SVM model performed effectively with an accuracy of 86% on test data. This trained model is ready for integration into a Flask server and subsequent deployment on the website.</p>
+        </ul>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
