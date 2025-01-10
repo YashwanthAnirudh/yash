@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Prices Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-banner {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header-banner h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-banner .subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .header-banner img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .content-container p, .content-container ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skills-section span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .design-section img {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 10px;
+        }
+        .project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-link .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #0d6efd;
+}
+h4 {
+    font-size: 1 rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 10px;
+}
+.result-image {
+    max-width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add spacing around the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.center-text {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Add spacing above */
+    margin-bottom: 10px; /* Optional: Add spacing below */
+    font-size: 1.2rem; /* Optional: Adjust font size */
+    color: #212529; /* Optional: Ensure proper text color */
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <h1>House Prices Prediction</h1>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="content-container">
+
+        <!-- About Section -->
+        <h2><span class="checkmark">✔</span>Problem Statement</h2>
+        <ul>
+        <p>The goal of this project is to develop a machine learning model capable of accurately predicting real estate prices in Bangalore based on key features such as area, number of bedrooms, and number of bathrooms. The model will utilize the Bangalore home prices dataset sourced from Kaggle. This involves handling the entire machine learning pipeline, including data preprocessing, feature engineering, model selection, hyperparameter tuning, and performance evaluation. The final model will be saved and deployed to power the backend of a real estate price prediction website.</p>
+        </ul>
+
+       <!-- Project Links -->
+<h4>Github Link</h4>
+<p>
+    <a href="https://github.com/YashwanthAnirudh/House-price-prediction" target="_blank" class="project-link">
+        <span class="icon">🔗</span> Link →
+    </a>
+</p>
+
+<h2><span class="checkmark">✔</span>Process</h2>
+<ul>
+    <li><strong>Step 1: Data Cleaning</strong> – Removed irrelevant or inconsistent data to ensure data quality. 
+        <ul>
+            <li>Dropped unnecessary columns and handled missing values (NA values) effectively.</li>
+            <li>Cleaned and standardized the <code>total_sqft</code> column, which contained values in ranges (e.g., 2100-4000). For such cases, calculated the average of the range. Converted other values (e.g., 34.56 square meters) to square feet, making the entire column uniform.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 2: Feature Engineering</strong> – Enhanced the dataset by creating meaningful features.
+        <ul>
+            <li>Added a new column, <code>bhk</code> (Bedroom, Hall, Kitchen), based on the number of bedrooms.</li>
+            <li>Created a <code>price_per_sqft</code> column by dividing the price by the total square feet to standardize price comparisons.</li>
+            <li>Reduced the dimensionality of the <code>locations</code> column by grouping locations with less than 10 data points as "Other." This approach significantly decreased the number of categories, simplifying the one-hot encoding process.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 3: Outlier Removal</strong> – Ensured data consistency by removing anomalies.
+        <ul>
+            <li><strong>Size Threshold:</strong> Removed properties where the square footage per BHK was below 300 sqft (e.g., a 2 BHK apartment with less than 600 sqft was considered an outlier).</li>
+            <li><strong>Price per Square Foot:</strong> Used the <code>price_per_sqft.describe</code> function to identify and remove outliers based on mean and one standard deviation, ensuring consistency within locations.</li>
+            <li><strong>BHK Anomalies:</strong> Eliminated properties where, for the same location, a larger BHK apartment was priced lower than a smaller BHK apartment with the same area.</li>
+            <li><strong>Bathroom Anomalies:</strong> Removed properties where the number of bathrooms exceeded the number of bedrooms, as such configurations were deemed unrealistic.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 4: One-Hot Encoding</strong> – Converted categorical data into numerical format for model compatibility.
+        <ul>
+            <li>Converted categorical text data (e.g., locations) into binary columns using one-hot encoding.</li>
+            <li>Ensured all text data was transformed into numerical form, making the dataset compatible with machine learning models.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 5: Model Building</strong> – Developed and evaluated predictive models.
+        <ul>
+            <li><strong>Initial Model:</strong> Selected Linear Regression for its effectiveness in predicting house prices, which is the dependent variable, based on independent variables like location and BHK.</li>
+            <li>Split the dataset into training and testing sets using <code>train_test_split</code>.</li>
+            <li>Trained the model and evaluated its performance using <code>model.score(X_test, Y_test)</code>, achieving an initial accuracy of 86%.</li>
+        </ul>
+    </li>
+
+    <li><strong>Advanced Techniques:</strong>
+        <ul>
+            <li>Applied K-Fold Cross Validation (5 folds) to validate the Linear Regression model's performance. All iterations achieved an accuracy above 80%.</li>
+            <li>Conducted GridSearchCV to test other regression models, including Lasso Regression and Decision Tree Regression.</li>
+        </ul>
+    </li>
+
+    <li><strong>Results:</strong>
+        <ul>
+            <li>On validation data, Linear Regression provided the best accuracy of 84%, outperforming other models.</li>
+            <li>Based on these results, Linear Regression was selected as the final model.</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+        <!-- Skills Section -->
+        <h2><span class="checkmark">✔</span>Skills Showcased</h2>
+        <div class="skills-section">
+            <span>Data Cleaning</span>
+            <span>Data Preprocessing</span>
+            <span>Feature Engineering</span>
+            <span>Hyperparameter Tuning</span>
+            <span>Python</span>
+            <span>Exploratory Data Analysis</span>
+        </div>
+
+        <h2><span class="checkmark">✔</span> Technologies Used</h2>
+        <div class="skills-section">
+            <span>One Hot Encoding</span>
+            <span>Matplotlib</span>
+            <span>Sklearn</span>
+            <span>GridSearchCV</span>
+        </div>
+
+      <!-- Results Section -->
+
+        
+<p class="center-text"><strong>Best Model</strong></p>
+<img src="images/projects/housepriceprediction.jpg" alt="Best Model" class="result-image">
+
+<h2><span class="checkmark">✔</span>Conclusion</h2>
+        <ul>
+<p>The trained regression model was saved for deployment, powering the backend of a real estate price prediction website.</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
