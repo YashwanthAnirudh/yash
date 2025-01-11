@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Email Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-banner {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header-banner h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-banner .subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .header-banner img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .content-container p, .content-container ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skills-section span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .design-section img {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 10px;
+        }
+        .project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-link .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #0d6efd;
+}
+h4 {
+    font-size: 1 rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 10px;
+}
+.result-image {
+    max-width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add spacing around the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.center-text {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Add spacing above */
+    margin-bottom: 10px; /* Optional: Add spacing below */
+    font-size: 1.2rem; /* Optional: Adjust font size */
+    color: #212529; /* Optional: Ensure proper text color */
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <h1>Spam Email Detection</h1>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="content-container">
+
+        <!-- About Section -->
+        <h2><span class="checkmark">✔</span>Problem Statement</h2>
+        <ul>
+            <p>The goal of this project is to develop a machine learning model capable of accurately classifying emails as either spam or not spam (ham) based on their content. The project will leverage labeled email datasets for training and evaluation. The process includes handling the entire machine learning pipeline: text preprocessing, feature extraction using scikit-learn's CountVectorizer, model training with the Multinomial Naive Bayes algorithm, hyperparameter tuning, and performance evaluation. The final model will be saved and deployed to serve as the backend for an automated email spam detection system.</p>
+        </ul>
+
+       <!-- Project Links -->
+<h4>Github Link</h4>
+<p>
+    <a href="https://github.com/YashwanthAnirudh/spam-email-detection/tree/main" target="_blank" class="project-link">
+        <span class="icon">🔗</span> Link →
+    </a>
+</p>
+
+<h2><span class="checkmark">✔</span>Process</h2>
+<ul>
+    <li><strong>Step 1: Data Preparation</strong> – Prepared the dataset for analysis.
+        <ul>
+            <li>Loaded the dataset using the <code>.read_csv</code> function in Jupyter Notebook.</li>
+            <li>Analyzed the distribution of spam and non-spam emails using the <code>groupby</code> function.</li>
+            <li>Added a binary column, <code>spam</code>, assigning 1 for spam emails and 0 for non-spam emails.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 2: Data Splitting</strong> – Divided the dataset into training and testing subsets.
+        <ul>
+            <li>Used <code>train_test_split</code> from scikit-learn to split the dataset into training and testing subsets.</li>
+            <li>Set <code>X</code> as the <code>Message</code> column (input) and <code>Y</code> as the <code>spam</code> column (target value).</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 3: Text Vectorization</strong> – Converted text data into numerical format.
+        <ul>
+            <li>Transformed the <code>Message</code> column into numerical vectors using scikit-learn's <code>CountVectorizer</code>, enabling compatibility with machine learning models.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 4: Model Selection and Training</strong> – Chose and trained the classification model.
+        <ul>
+            <li>Selected the Multinomial Naive Bayes algorithm for its effectiveness in classifying discrete data.</li>
+            <li>Trained the model on the training data and evaluated its performance on the test data.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 5: Model Evaluation</strong> – Tested and compared model performance.
+        <ul>
+            <li>Tested the model on random samples, accurately classifying emails as spam or non-spam.</li>
+            <li>Achieved an accuracy of 98% on the test data.</li>
+            <li>Compared performance with other classifiers, including Random Forest and Support Vector Machines (SVM), which underperformed in this classification task.</li>
+        </ul>
+    </li>
+
+    <li><strong>Step 6: Finalization</strong> – Finalized and saved the model.
+        <ul>
+            <li>Selected Multinomial Naive Bayes as the final model due to its high accuracy and reliable performance.</li>
+            <li>Saved the trained model for deployment in future applications, enabling real-time email spam detection.</li>
+        </ul>
+    </li>
+
+    <li><strong>Outcome:</strong>
+        <ul>
+            <li>The Multinomial Naive Bayes model achieved 98% accuracy on the test data, proving to be the most effective solution for classifying emails as spam or non-spam.</li>
+          
+        </ul>
+    </li>
+</ul>
+
+    
+
+
+        <!-- Skills Section -->
+        <h2><span class="checkmark">✔</span>Skills Showcased</h2>
+        <div class="skills-section">
+            <span>Data Cleaning</span>
+            <span>Data Preprocessing</span>
+            <span>Feature Engineering</span>
+            <span>Python</span>
+            <span>Exploratory Data Analysis</span>
+        </div>
+
+      <!-- Results Section -->
+
+        
+<p class="center-text"><strong>Best Model</strong></p>
+<img src="images/projects/spamemaildetection.jpg" alt="Best Model" class="result-image">
+
+<h2><span class="checkmark">✔</span>Conclusion</h2>
+        <ul>
+<p>Saved the trained model for deployment in future applications, enabling real-time email spam detection.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
