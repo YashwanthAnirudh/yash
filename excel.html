@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-banner {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header-banner h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-banner .subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .header-banner img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+
+        .content-container p, .content-container ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skills-section span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .design-section img {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 10px;
+        }
+        .project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-link .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.project-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #0d6efd;
+}
+h4 {
+    font-size: 1 rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 10px;
+}
+.result-image {
+    max-width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add spacing around the image */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.center-text {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Optional: Add spacing above */
+    margin-bottom: 10px; /* Optional: Add spacing below */
+    font-size: 1.2rem; /* Optional: Adjust font size */
+    color: #212529; /* Optional: Ensure proper text color */
+}
+.carousel-container {
+            max-width: 900px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            background-color: #0d6efd;
+            border-radius: 50%;
+        }
+
+        .carousel-indicators [data-bs-target].active {
+            background-color: #0a58ca;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <h1>Excel Dashboard</h1>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="content-container">
+
+        <!-- About Section -->
+        <h2><span class="checkmark">✔</span>Problem Statement</h2>
+        <ul>
+        <p>The goal was to analyze and visualize sales data across multiple dimensions, including country, product, salesperson, and category. The objective was to create a dynamic, user-friendly dashboard to provide actionable insights for stakeholders, helping them track sales performance, identify trends, and make data-driven decisions.</p>
+        </ul>
+
+       <!-- Project Links -->
+<h4>Excel Workbook</h4>
+<p>
+    <a href="https://1drv.ms/x/s!Aooq9kS2e9nvga8xbwB-lyvyOcjvCg?e=3zwXfH" target="_blank" class="project-link">
+        <span class="icon">🔗</span> Link →
+    </a>
+</p>
+
+<!-- Carousel Section -->
+<div class="carousel-container">
+    <div id="dashboardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/Dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#dashboardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#dashboardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/projects/excel1.jpg" class="d-block w-100" alt="Dashboard 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/projects/excel2.jpg" class="d-block w-100" alt="Dashboard 2">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#dashboardCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#dashboardCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+<h2><span class="checkmark">✔</span>Process</h2>
+<ul>
+    <li><strong>1.Data Preparation:</strong>
+        <ul>
+            <li>Imported sales data into Excel, ensuring it was clean, consistent, and ready for analysis.</li>
+            <li>Organized data into structured columns, such as country, product, salesperson, date, amount, boxes, and category.</li>
+        </ul>
+    </li>
+
+    <li><strong>2.Data Analysis:</strong>
+        <ul>
+            <li>Calculated key metrics like total sales, total boxes, total shipments, and sales per salesperson using formulas and pivot tables.</li>
+            <li>Grouped sales data by geographic region, product category, and salesperson to extract meaningful insights.</li>
+        </ul>
+    </li>
+
+    <li><strong>3.Dashboard Design:</strong>
+        <ul>
+            <li>Created summary metrics for total sales, boxes, shipments, and average sales per person.</li>
+            <li>Used bar charts, pie charts, and detailed tables to display data effectively.</li>
+            <li>Emphasized clear labeling and color coding for easy readability.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2><span class="checkmark">✔</span>Key Insights</h2>
+<ul>
+
+    
+            <li><strong>Metrics Overview:</strong>
+                <ul>
+                    <li>Total Sales: ₹750,177,492</li>
+                    <li>Total Boxes: 669,020</li>
+                    <li>Total Shipments: 1,800</li>
+                    <li>Sales Per Person: ₹30,007,100</li>
+                </ul>
+            </li>
+
+            <li><strong>Sales by Geography:</strong>
+                <ul>
+                    <li>India contributed the highest sales (₹132,235,004), followed by Australia (₹130,269,343) and the USA (₹127,773,644).</li>
+                </ul>
+            </li>
+
+            <li><strong>Sales by Category:</strong>
+                <ul>
+                    <li>Bars generated the highest revenue (₹370,995,356, 49%).</li>
+                    <li>Bites contributed 32%, and the "Other" category contributed 19%.</li>
+                </ul>
+            </li>
+
+            <li><strong>Top Performers:</strong>
+                <ul>
+                    <li>Highest Salesperson: [Name, e.g., Ramalingam Kothapeta] with ₹35,396.6K in sales and 31,134 boxes sold.</li>
+                    <li>Several salespersons achieved over ₹30M in sales.</li>
+                </ul>
+            </li>
+
+            <li><strong>Visual Highlights:</strong>
+                <ul>
+                    <li>Pie charts for category contribution.</li>
+                    <li>Bar charts for regional sales comparison.</li>
+                    <li>A detailed leaderboard of salesperson performance.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+        <!-- Skills Section -->
+        <h2><span class="checkmark">✔</span>Skills Showcased</h2>
+        <div class="skills-section">
+            <span>Data Cleaning</span>
+<span>Data Transformation</span>
+<span>Dashboard Design</span>
+<span>Data Visualization</span>
+<span>Insight Derivation</span>
+<span>Excel Functions and Formulas</span>
+<span>Pivot Tables and Charts</span>
+        </div>
+
+
+      <!-- Results Section -->
+
+
+<h2><span class="checkmark">✔</span>Result</h2>
+        
+<p>The dashboard serves as a one-stop solution for monitoring sales performance and identifying high-performing regions, products, and salespersons.This analysis enables stakeholders to make informed decisions on resource allocation, target setting, and identifying growth opportunities.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
